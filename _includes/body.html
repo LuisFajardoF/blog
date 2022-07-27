@@ -1,0 +1,58 @@
+<div class="body-inner">
+    <div class="book-header" role="navigation">
+        <!-- Title -->
+        <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i>
+            {% if page.title %}
+                <a href="." >{{ page.title | escape }}</a>
+            {% else %}
+                <a href="." >{{ site.title | escape }}</a>
+            {% endif %}
+        </h1>
+    </div>
+
+    <div class="page-wrapper" tabindex="-1" role="main">
+        <div class="page-inner">
+            <div id="book-search-results">
+                <div class="search-noresults">
+                    <h3 class="edition-post">
+                        {{ page.date | date: '%-d' }}
+                        {% assign mes = page.date | date: '%-m' %}
+                        {% case mes %}
+                            {% when '1' %}Ene {% when '2' %}Feb {% when '3' %}Mar
+                            {% when '4' %}Abr {% when '5' %}May {% when '6' %}Jun
+                            {% when '7' %}Jul {% when '8' %}Ago {% when '9' %}Sep
+                            {% when '10' %}Oct {% when '11' %}Nov {% when '12' %}Dic
+                        {% endcase %}
+                        {{  page.date | date: '%Y' }}
+                    </h3>
+                    <section class="normal markdown-section">
+
+                        {% if page.title %}
+                            <h1 id="{{ page.id }}">{{ page.title | escape }}</h1>
+                        {% else %}
+                            <h1 id="{{ page.id }}">{{ site.title | escape }}</h1>
+                        {% endif %}
+
+                        {{ content }}
+                    </section>
+                    <h6 class="edition-post">
+                        Editado:
+                        {{  page.edited | date: '%-d' }}
+                        {% assign mes = page.edited | date: '%-m' %}
+                        {% case mes %}
+                            {% when '1' %}Ene {% when '2' %}Feb {% when '3' %}Mar
+                            {% when '4' %}Abr {% when '5' %}May {% when '6' %}Jun
+                            {% when '7' %}Jul {% when '8' %}Ago {% when '9' %}Sep
+                            {% when '10' %}Oct {% when '11' %}Nov {% when '12' %}Dic
+                        {% endcase %}
+                        {{  page.edited | date: '%Y' }} | Autor: {{ page.author }}
+                        <!-- Editado: {{ page.edited | date_to_string }} | Autor: {{ page.author }} -->
+                    </h6>
+                </div>
+
+                <!-- {%- include search.html -%} -->
+            </div>
+        </div>
+    </div>
+</div>
