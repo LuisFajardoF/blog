@@ -16,15 +16,15 @@ require(['gitbook', 'jquery'], function(gitbook, $) {
                 window.open('https://t.me/luis96791');
             }
         },
-        'download': {
+        /**'download': {
             'label': 'Download',
             'icon': 'fas fa-download', 
             'onClick': function(e) {
                 e.preventDefault();
                 window.open('https://luisfajardof.github.io/md2tex-docs/download.html');
             }
-        }
-    };
+        } **/ //al comentar una no funcionan las demas
+    }; 
 
 
 
