@@ -2,7 +2,7 @@
 title: Lenguajes compilados e interpretados
 author: Luis E. Fajardo
 date: 27-07-2022
-edited: 27-07-2022
+edited: 28-07-2022
 category: env
 layout: post
 ---
@@ -55,39 +55,44 @@ int main(int argc, char *argv[])
 El fragmento de código anterior puede ser ejecutado _(desde CMD o Terminal)_ de la siguiente manera:
 
 ```
-C:\> g++ test.cpp -o test
+C:\> g++ <source code>.cpp -o <output program>
 ```
+> Donde `<source code>` y `<output program>` puede ser un nombre de su elección.
+
 Al ejecutar el comando anterior usted está **compilando** el archivo `test.cpp`. :eyes:
 
 #### Para recordar...
 > - **g++**: compilador de C++. En sistemas Windows viene dentro del paquete MinGW.
-> - **test.cpp**: contiene el código fuente a ejecutar.
+> - **\<source code\>.cpp**: contiene el código fuente a ejecutar.
 > - **-o**: indica que se deberá producir un archivo de salida. Este _flag_ espera que a la derecha se agregue el nombre del programa.
-> - **test**: el nombre del programa que se ha de ejecutar. 
+> - **\<output program\>**: el nombre del programa que se ha de ejecutar. 
 
 Usted puede ejecutar el programa de la siguiente manera:
 ```
-C:\> ./test.exe
+C:\> ./<output program>.exe
 ```
 > <i class="fas fa-info-circle fa-1x"></i> En Windows generalmente el sistema se encarga de agregar la extensión `.exe`.
 
-El resultado de ejecutar el programa `test.exe` debería ser la sumatoria de las variables `number1` y `number2`.
-
-[^1]: Esto es _lenguaje máquina_.
-[^2]: Ceros y unos (0s, 1s); donde 0 significa que no hay flujo eléctrico y 1 significa un impulso eléctrico. 
-[^3]: Antes de ser compilado pasa por un proceso intermedio llamado _traducción a bytecode_.
+El resultado de ejecutar `<output program>.exe` debería ser la sumatoria de las variables `number1` y `number2`.
 
 ## Diferencias entre lenguajes compilados e interpretados
 
 - El ciclo de desarrollo en los _lenguajes interpretados_ consiste en escribir el código fuente y ejecutarlo, mientras que en los _lenguajes compilados_ se necesita realizar el proceso de **compilación** cada vez que se modifica el código fuente.
-- Un lenguaje interpretado se ejecuta menos rápido que un lenguaje compilado.
-- Un lenguaje compilado puede hacer optimizaciones a bajo nivel; en un lenguaje interpretado esto no es posible.
-- Los lenguajes compilados están optimizados para que la ejecución del programa sea rápida aunque esto represente mayor esfuerzo de parte del programador. Los lenguajes interpretados están optimizados para _"ahorrarle"_ esfuerzos al programador aunque esto represente una carga adicional para el procesador.
+- Un lenguaje interpretado se ejecuta con menor rápidez que un lenguaje compilado.
+- En un lenguaje compilado, las optimizaciones a bajo nivel se le facilitan al compilador; mientras que en un lenguaje interpretado estas optimizaciones pueden ser limitadas.
+- Los lenguajes compilados están optimizados para que la ejecución del programa sea rápida aunque esto represente mayor esfuerzo de parte del programador. Los lenguajes interpretados están optimizados para _"ahorrarle"_ esfuerzos al programador aunque esto represente una ligera demora en la ejecución del programa.
 
 # Acerca de Java
 
-Java es un lenguaje compilado, pero esa compilación se hace a un lenguaje intermedio llamado _bytecode_ que luego es interpretado por la máquina virtual de Java _(Java Virtual Machine)_. La idea de compilar a un lenguaje intermedio es para facilitar la **portabilidad**, esto quiere decir que un programa escrito en Java puede ser ejecutado en cualquier sistema operativo que contenga el JRE _(Java Runtime Environment)_.
+Java es un lenguaje compilado, pero esa compilación se hace a un lenguaje intermedio llamado _bytecode_ que luego es interpretado por la máquina virtual de Java _(Java Virtual Machine)_. La idea de compilar a un lenguaje intermedio es para facilitar la **portabilidad**, esto quiere decir que un programa escrito en Java puede ser ejecutado en cualquier sistema operativo _(Windows, macOS, Linux)_ que tenga instalado el JRE _(Java Runtime Environment)_.
 
-# Conclusion
+# Conclusión
 
-La brecha entre los lenguajes compilados e interpretados se está reduciendo. Los lenguajes compilados están modificando su sintaxis para facilitarle el desarrollo al programador; mientras que los lenguajes interpretados están mejorando en cuanto a velocidad de ejecución. 
+La brecha entre los lenguajes compilados e interpretados se está reduciendo. Los lenguajes compilados están modificando su sintaxis para facilitarle la escritura de _código fuente_ al programador; mientras que los lenguajes interpretados están mejorando en cuanto a velocidad de ejecución. 
+
+
+<hr style="border-top: 3px solid #bbb;">
+
+[^1]: Esto es _lenguaje máquina_.
+[^2]: Ceros y unos (0s, 1s); donde 0 significa que no hay flujo eléctrico y 1 significa un impulso eléctrico. 
+[^3]: Antes de ser compilado pasa por un proceso intermedio llamado _traducción a bytecode_.
