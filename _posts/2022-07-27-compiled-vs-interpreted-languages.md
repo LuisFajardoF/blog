@@ -7,7 +7,6 @@ category: env
 layout: post
 ---
 
-<!--
 La diferencia entre un lenguaje compilado y uno interpretado es que un lenguaje compilado necesita de un paso adicional antes de ser ejecutado, ese paso adicional se conoce como **compilación**; la compilación traduce el código que usted ha escrito a lenguaje que el procesador puede entender[^1].
 
 Un lenguaje interpretado, es convertido a _lenguaje máquina_[^2] a medida el código vá siendo ejecutado.
@@ -97,24 +96,3 @@ La brecha entre los lenguajes compilados e interpretados se está reduciendo. Lo
 [^1]: Esto es _lenguaje máquina_.
 [^2]: Ceros y unos (0s, 1s); donde 0 significa que no hay flujo eléctrico y 1 significa un impulso eléctrico. 
 [^3]: Antes de ser compilado pasa por un proceso intermedio llamado _traducción a bytecode_.
--->
-<style type="text/css" media="screen">
-  .container {
-    margin: 10px auto;
-    max-width: 600px;
-    text-align: center;
-  }
-  h1 {
-    margin: 30px 0;
-    font-size: 4em;
-    line-height: 1;
-    letter-spacing: -1px;
-  }
-</style>
-
-<div class="container">
-    <h1><i class="fas fa-sad-tear fa-3x"></i></h1>
-
-    <p><strong>The requested page could not be found.</strong></p> 
-    <p><a href="{{ site.baseurl }}/">Head back home</a></p>
-</div>
